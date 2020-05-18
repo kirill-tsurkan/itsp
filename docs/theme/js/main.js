@@ -31,7 +31,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'madmak/ckab261sj4z921iph3a9clki9',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: ''
+    accessToken: 'pk.eyJ1IjoibWFkbWFrIiwiYSI6ImNrYWN6ZXlrOTFsNzAydG10aGR6NjV2ejIifQ.DSYlfIa8gsILalC0UUzSbQ'
 }).addTo(mymap);
 
 var mapIcon = L.icon({

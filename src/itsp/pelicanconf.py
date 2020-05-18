@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'itsp'
 SITENAME = 'itsp'
-SITEURL = ''
+SITEURL = 'https://kirill-tsurkan.github.io/itsp/'
 
 PATH = 'content'
 OUTPUT_PATH = 'docs/'
