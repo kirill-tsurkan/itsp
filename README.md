@@ -25,6 +25,13 @@ Set up for development
 6. Install requirements:
     `pip install -r requirements.txt`
 
+7. Create environment settings inside `./src/itsp/conf` folder:
+    Create new `env_conf.py` file from env_conf.py.example
+    Create new `dev_conf.py` file from dev_conf.py.example and fill in all the required settings for your local evironment
+    Create new `prod_conf.py` file from prod_conf.py.example and fill in all the required settings for your production ready evironment
+
+8. Switch between `dev` and `prod` inside `conf/env_conf.py` if you want to generate files for production or local development
+
 Make sure you **always** use virtual environment before doing something in terminal.
 You can check for current environment with: `pip -V`. It should show current python interpreter in use. Must be the one inside project's `venv` folder.
 
@@ -32,7 +39,10 @@ https://docs.getpelican.com/en/stable/index.html
 
 Commands
 ------
-pelican --help      # help
-pelican content     # generate output files
-pelican -r          # watch for changes in files
-pelican --listen    # run devserver at 127.0.0.1:8000
+
+cd to project folder `./src/itsp`
+
+- pelican --help      # help
+- pelican content     # generate output files
+- pelican -r          # watch for changes in files
+- pelican --listen    # run devserver at 127.0.0.1:8000

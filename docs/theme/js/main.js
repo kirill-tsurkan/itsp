@@ -31,11 +31,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'madmak/ckab261sj4z921iph3a9clki9',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoibWFkbWFrIiwiYSI6ImNrYWN6ZXlrOTFsNzAydG10aGR6NjV2ejIifQ.DSYlfIa8gsILalC0UUzSbQ'
+    accessToken: maptoken
 }).addTo(mymap);
 
 var mapIcon = L.icon({
-    iconUrl: '/theme/images/map-marker.svg',
+    iconUrl: siteurl + '/theme/images/map-marker.svg',
     iconSize: [60, 60]
 });
 

@@ -1,0 +1,8 @@
+SITEURL = '' # without trailing slash
+OUTPUT_PATH = '../../docs/'
+TIMEZONE = "Europe/Chisinau"
+
+MAP_TOKEN = '' # token for mapbox.com map
+
+# Uncomment following line if you want document-relative URLs when developing
+#RELATIVE_URLS = True

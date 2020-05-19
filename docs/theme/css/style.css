@@ -221,10 +221,11 @@ pre code {
     align-items: center;
 }
 
-@supports (backdrop-filter: blur(0)) {
+@supports ((-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0))) {
     .header__nav {
         background: var(--white-09);
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
     }
 }
 
@@ -483,7 +484,10 @@ pre code {
 .hero__dots {
     display: block;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -537,8 +541,12 @@ pre code {
         height: 100%;
         border-radius: 3px 0 0 3px;
         width: calc((100vw - 750px) / 2 + 100% + 15px);
-        object-fit: cover;
-        user-select: none;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 
@@ -560,7 +568,10 @@ pre code {
         right: -69px;
         display: block;
         opacity: .1;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 
@@ -570,7 +581,10 @@ pre code {
         right: -69px;
         display: block;
         opacity: .1;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 
@@ -580,7 +594,10 @@ pre code {
         bottom: 0;
         left: -69px;
         display: block;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 
@@ -591,7 +608,10 @@ pre code {
         left: -69px;
         display: block;
         opacity: .1;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 
@@ -602,7 +622,10 @@ pre code {
         right: 0;
         display: block;
         opacity: .2;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         pointer-events: none;
     }
 }
@@ -670,7 +693,10 @@ pre code {
     width: 100%;
     margin: 0 auto;
     max-width: 240px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -848,7 +874,10 @@ pre code {
 .sh__image__img {
     display: block;
     width: 100%;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -859,7 +888,10 @@ pre code {
     bottom: 0;
     opacity: .4;
     max-width: 50%;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -875,7 +907,10 @@ pre code {
     bottom: 0;
     max-width: 50%;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -911,7 +946,8 @@ pre code {
         width: calc((100vw - 750px) / 2 + 100% + 15px - 30px);
         height: 100%;
         max-width: none;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 }
 
@@ -956,9 +992,13 @@ pre code {
 .about__image__img {
     display: block;
     width: 100%;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     height: 200px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     pointer-events: none;
 }
 
@@ -966,7 +1006,10 @@ pre code {
     position: absolute;
     z-index: 1;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
     top: 6px;
     right: 0;
@@ -977,7 +1020,10 @@ pre code {
     position: absolute;
     z-index: 1;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
     bottom: 0;
     left: 0;
@@ -993,7 +1039,10 @@ pre code {
     position: absolute;
     z-index: 1;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     top: 0;
     right: 0;
     max-width: 25%;
@@ -1059,7 +1108,8 @@ pre code {
         height: 100%;
         max-width: none;
         width: calc((100vw - 990px) / 2 + 100% + 15px + (25% + 30px));
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
     .about__leading {
@@ -1152,7 +1202,10 @@ pre code {
     display: block;
     margin-bottom: 10px;
     width: 24px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -1161,7 +1214,10 @@ pre code {
     bottom: 0;
     right: 0;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -1336,7 +1392,10 @@ a.footer__contact__link:hover {
     width: 18px;
     height: 18px;
     margin-right: 20px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .footer__bank__title {
@@ -1434,7 +1493,10 @@ a.footer__contact__link:hover {
     top: 0;
     right: 0;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
     max-width: 66.6666%;
 }
@@ -1451,7 +1513,8 @@ a.footer__contact__link:hover {
     display: block;
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .article__list-block {
@@ -1465,7 +1528,10 @@ a.footer__contact__link:hover {
     bottom: 0;
     max-width: 66.6666%;
     opacity: .1;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 

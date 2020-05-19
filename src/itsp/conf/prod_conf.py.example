@@ -1,0 +1,5 @@
+SITEURL = 'https://example.com' # without trailing slash
+OUTPUT_PATH = '../../docs/'
+TIMEZONE = "Europe/Chisinau"
+
+MAP_TOKEN = '' # token for mapbox.com map
