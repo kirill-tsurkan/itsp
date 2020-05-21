@@ -18,6 +18,7 @@ $(window).on('scroll', function () {
     }
 });
 
+// https://github.com/cferdinandi/smooth-scroll
 var scroll = new SmoothScroll('[data-scroll]', {
     header: '.header__nav',
     offset: 20
