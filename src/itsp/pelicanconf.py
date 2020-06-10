@@ -28,6 +28,13 @@ if PROJECT_ENV == 'dev':
     except ImportError:
         print(f"{bcolors.FAIL}Environment settings for local development can not be found. Check readme.md file for set up process{bcolors.ENDC}")
 
+elif PROJECT_ENV == 'test':
+    try:
+        from conf.test_conf import *
+        print(f"{bcolors.OKBLUE}INFO: running using test settings{bcolors.ENDC}")
+    except ImportError:
+        print(f"{bcolors.FAIL}ERROR: Environment settings for production can not be found. Check readme.md file for set up process{bcolors.ENDC}")
+
 elif PROJECT_ENV == 'prod':
     try:
         from conf.prod_conf import *

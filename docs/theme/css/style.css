@@ -52,6 +52,14 @@ h2,
     margin: 0 0 20px;
 }
 
+h3,
+.h3 {
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
 p {
     margin-bottom: 1.5em;
 }
@@ -187,6 +195,11 @@ abbr[data-original-title] {
         margin: 0 0 40px;
     }
 
+    h3,
+    .h3 {
+        margin: 0 0 10px;
+    }
+
     .link {
         font-size: 20px;
     }
@@ -211,6 +224,11 @@ abbr[data-original-title] {
     h2,
     .h2 {
         font-size: 32px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 28px;
     }
 
     .main {
@@ -1443,6 +1461,13 @@ a.footer__contact__link:hover {
     background: linear-gradient(to bottom, var(--dark) 0%, transparent 100%);
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    .footer__map {
+        position: relative;
+        height: 50vh;
+    }
+}
+
 @media (min-width: 768px) {
     .footer__inner {
         max-width: 750px;
@@ -1648,6 +1673,25 @@ a.footer__contact__link:hover {
     max-width: 60%;
 }
 
+
+.article__sections__column {
+    margin-bottom: 20px;
+}
+
+.article__sections__column:last-of-type {
+    margin-bottom: 0;
+}
+
+.article__sections__image__img {
+    width: 100%;
+    display: block;
+}
+
+.article__sections__body {
+    padding: 20px;
+    border: 1px solid var(--blue-01);
+    border-top: 0;
+}
 @media (min-width: 768px) {
     .article__inner {
         max-width: 750px;
@@ -1758,6 +1802,33 @@ a.footer__contact__link:hover {
     .article__block_mb:last-child {
         margin-bottom: 80px;
     }
+
+    .article__sections {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article__sections__column {
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .article__sections__column:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .article__sections__item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article__sections__body {
+        flex: 1;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -1817,6 +1888,10 @@ a.footer__contact__link:hover {
     .article__list_vertical .article__list__item::before {
         top: 8px;
         left: 0;
+    }
+
+    .article__sections__column {
+        width: 33.3333%;
     }
 }
 
