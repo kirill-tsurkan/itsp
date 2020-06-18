@@ -43,7 +43,7 @@ Commands
 
 cd to project folder `./src/itsp`
 
-- pelican --help      # help
-- pelican content     # generate output files
-- pelican -r          # watch for changes in files
-- pelican --listen    # run devserver at 127.0.0.1:8000
+- `pelican --help`      help
+- `pelican content`     generate output files
+- `pelican -r`          watch for changes in files
+- `pelican --listen`    run devserver at 127.0.0.1:8000
