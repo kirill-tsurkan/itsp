@@ -1394,9 +1394,13 @@ abbr[data-original-title] {
 }
 
 .footer__contact {
+    margin: 0 0 10px;
+}
+
+.footer__contact__list {
     list-style: none;
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0;
 }
 
 .footer__contact__item {
@@ -1439,7 +1443,7 @@ a.footer__contact__link:hover {
 .footer__bank__title {
     font-size: 18px;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: var(--white);
 }
 
@@ -1461,6 +1465,20 @@ a.footer__contact__link:hover {
     background: linear-gradient(to bottom, var(--dark) 0%, transparent 100%);
 }
 
+.footer__bank__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__bank__item {
+    margin-bottom: 15px;
+}
+
+.footer__bank__item:last-of-type {
+    margin-bottom: 0;
+}
+
 @media (max-width: 767px) and (orientation: landscape) {
     .footer__map {
         position: relative;
@@ -1469,6 +1487,27 @@ a.footer__contact__link:hover {
 }
 
 @media (min-width: 768px) {
+    .footer__data {
+        width: 66.6666%;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__data__row {
+        margin: 0 -15px;
+        display: flex;
+    }
+
+    .footer__data__column {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    .footer__bank__title {
+        width: 100%;
+    }
+
     .footer__inner {
         max-width: 750px;
         margin: 0 auto;
@@ -1481,28 +1520,15 @@ a.footer__contact__link:hover {
     }
 
     .footer__contact {
-        margin-left: auto;
         margin-bottom: 0;
     }
 
-    .footer__bank {
-        margin-left: 30px;
-        width: 33.3333%;
-    }
 }
 
 
 @media (min-width: 992px) {
     .footer__inner {
         max-width: 990px;
-    }
-
-    .footer__contact {
-        width: 33.3333%;
-    }
-
-    .footer__bank {
-        margin-left: 0;
     }
 }
 
