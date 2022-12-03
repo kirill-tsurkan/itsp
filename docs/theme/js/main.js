@@ -39,8 +39,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 var mapIcon = L.icon({
-    //iconUrl: siteurl + '/theme/images/map-marker.svg',
-    iconUrl: '/theme/images/map-marker.svg',
+    iconUrl: siteroot + '/theme/images/map-marker.svg',
+    // iconUrl: '/theme/images/map-marker.svg',
     iconSize: [60, 60]
 });
 
