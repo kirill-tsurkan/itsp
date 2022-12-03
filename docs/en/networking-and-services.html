@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    
+    <title>        itsp - Сети и сервисы
+</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Проектирование, внедрение и сопровождение серверного оборудования, компьютерных сетей и сервисов">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/theme/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/theme/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/theme/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/theme/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#202020">
+    <meta name="msapplication-config" content="/theme/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://api.mapbox.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+    <link rel="stylesheet" href="/theme/css/style.min.css">
+
+
+
+
+
+
+
+            <link rel="alternate" hreflang="ro" href="https://kirill-tsurkan.github.io/itsp/en/../ro/networking-and-services.html">
+    <link rel="alternate" hreflang="ru" href="https://kirill-tsurkan.github.io/itsp/en/../networking-and-services.html">
+
+
+
+    <script>
+        const siteurl = 'https://kirill-tsurkan.github.io/itsp/en';
+        const maptoken = 'pk.eyJ1IjoibWFkbWFrIiwiYSI6ImNrYWN6ZXlrOTFsNzAydG10aGR6NjV2ejIifQ.DSYlfIa8gsILalC0UUzSbQ';
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav" data-nav>
+            <a class="header__logo" href="https://kirill-tsurkan.github.io/itsp/en/">
+                <img class="header__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
+            </a>
+
+            <div class="header__menu" data-mobMenu>
+                <ul class="header__nav-list">
+
+
+                            <li class="header__nav-item  header__nav-item_active ">
+                                <a class="header__nav-link" href="https://kirill-tsurkan.github.io/itsp/en/networking-and-services.html">
+                                    <span class="header__nav-link__inner">Сети и сервисы</span>
+                                </a>
+                            </li>
+                            <li class="header__nav-item ">
+                                <a class="header__nav-link" href="https://kirill-tsurkan.github.io/itsp/en/it-management.html">
+                                    <span class="header__nav-link__inner">Управление IT</span>
+                                </a>
+                            </li>
+                            <li class="header__nav-item ">
+                                <a class="header__nav-link" href="https://kirill-tsurkan.github.io/itsp/en/smart-home.html">
+                                    <span class="header__nav-link__inner">Умный дом</span>
+                                </a>
+                            </li>
+
+                </ul>
+
+                <a class="btn btn_header-phone" href="tel:+37322859869">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+
+                    <span class="btn__code">+373 22</span> 859 869
+                </a>
+
+                <div class="dropdown">
+                    <button class="dropdown__btn" type="button" data-dropdown_trigger>en</button>
+                    <div class="dropdown__menu" data-dropdown_target>
+                                    <a class="dropdown__menu__link" href="/">ru</a>
+                                    <a class="dropdown__menu__link" href="/ro">ro</a>
+                    </div>
+                </div>
+
+                <button class="header__btn header__btn_hide" type="button" aria-label="Close menu" data-btnMenuHide>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <button class="header__btn header__btn_show" type="button" aria-label="Open menu" data-btnMenuShow>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                    <path d="M12 15L21 15"/><path d="M3 9H21"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+
+    <main class="main">
+
+
+    
+    <article class="article">
+        <div class="article__inner">
+            <div class="article__header">
+                <img class="article__header__bg" src="https://kirill-tsurkan.github.io/itsp/en/images/article-header.svg" alt="">
+                <h1>Проектирование, внедрение и&nbsp;сопровождение серверного оборудования, компьютерных сетей и&nbsp;сервисов</h1>
+            </div>
+
+            <section class="article__block">
+                <div class="article__block__content">
+                    <h2>Рабочие станции и&nbsp;серверы на&nbsp;базе операционных систем Windows, Linux</h2>
+                    <p>Linux, FreeBSD&nbsp;&mdash; сервера с&nbsp;функциями маршрутизатора для подключения Интернет, контроль доступа офисной сети к&nbsp;интернет-услугам и&nbsp;управление доступом из&nbsp;интернета к&nbsp;сервисам офисной сети.</p>
+                    <p>Linux&nbsp;&mdash; рабочие станции. Нет лицензий Windows, лучше защищенность от&nbsp;компьютерных вирусов. Есть ограничения по&nbsp;принтерам, сканерам, пользовательскому софту. Более строгие требования к&nbsp;аппаратным характеристикам.</p>
+                    <p>Windows&nbsp;&mdash; централизованная авторизация пользователей, управление доступом к&nbsp;ресурсам сети (Active Directory). Файловые сервера, терминальные сервера (удаленный рабочий стол), 1С&nbsp;(всех версий), MS&nbsp;SQL Server (всех версий).</p>
+
+                    <p>Используемые инструменты&nbsp;&mdash; VMWare, Citrix Xen, MS&nbsp;Hyper-V, Linux KVM. Выполняем работы по&nbsp;проектированию, поставке и&nbsp;дальнейшей эксплуатации комплексов виртуализации, в&nbsp;том числе с&nbsp;общим сетевым хранилищем и&nbsp;отказоустойчивой группой серверов с&nbsp;балансировкой нагрузки и&nbsp;резервированием сервисов.</p>
+                    <p>Есть опыт работы с&nbsp;оборудованием&nbsp;HP.</p>
+                    <p>Возможны также бюджетные решения.</p>
+                    <p>Организация аренды серверного оборудования как в&nbsp;Молдове, так и&nbsp;в&nbsp;Европе. Перевод существующих сервисов на&nbsp;арендованные мощности с&nbsp;доступом через Интернет (так называемые решения в&nbsp;&laquo;облаке&raquo;)</p>
+                    <p>Настраиваем и&nbsp;обеспечиваем работу серверов для хостинга сайтов, а&nbsp;также для корпоративной почты. Эти функции могут выполняться как на&nbsp;оборудовании Заказчика, так и&nbsp;на&nbsp;арендованных мощностях в&nbsp;&laquo;облаке&raquo;</p>
+                </div>
+
+                <div class="article__block__image">
+                    <img class="article__block__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/network-and-services.jpg" alt="">
+                    <img class="article__block__image__ico" src="https://kirill-tsurkan.github.io/itsp/en/images/sh__left.svg" alt="">
+                </div>
+            </section>
+
+            <section class="article__block">
+                <div class="article__block__content">
+                    <h2>Администрирование&nbsp;1С</h2>
+
+                    <h3>Технологическое обслуживание</h3>
+                    <p>Для поддержки оптимальной производительности баз 1С&nbsp;необходимо регулярно выполнять работы по&nbsp;оптимизации. Эти работы включают в&nbsp;себя такие операции как: проверка логической и&nbsp;ссылочной целостности с&nbsp;исправлением обнаруженных проблем; переиндексация базы и&nbsp;дефрагментация индексов; оптимизация работы сервера SQL и&nbsp;т.п.</p>
+
+                    <h3>Перевод в&nbsp;SQL формат</h3>
+                    <p>Можем обеспечить работу 1С&nbsp;в&nbsp;режиме базы SQL с&nbsp;помощью MS&nbsp;SQL Server или PostgreSQL (бесплатная лицензия). Возможны решения с&nbsp;серверами 1С&nbsp;и&nbsp;SQL на&nbsp;основе системы Linux (бесплатная лицензия). В&nbsp;таком сценарии Windows может использоваться только на&nbsp;некоторых рабочих местах в&nbsp;офисе, что позволяет значительно снизить затраты на&nbsp;лицензирование.</p>
+
+                    <h3>Обеспечение эффективной работы на&nbsp;серверах</h3>
+                    <p>Очень часто используемые сервера с&nbsp;функциями 1С&nbsp;и&nbsp;SQL не&nbsp;настроены на&nbsp;оптимальную производительность для этих сервисов. В&nbsp;числе типовых проблем обычно встречаются: неэффективное использование дисков, неоптимальная настройка SQL, базовые настройки производительности серверного оборудования, не&nbsp;соответствующие текущей нагрузке настройки программы сервера &laquo;1С&nbsp;Предприятие&raquo;.</p>
+
+                    <h3>Организация резервного копирования и&nbsp;управление копиями</h3>
+                    <p>Исходя из&nbsp;требований Заказчика создаётся автоматизированная система для создания резервных копий баз данных в&nbsp;нужное время и&nbsp;с&nbsp;нужными параметрами. Также определяются сроки хранения полученных архивных файлов. Типовой сценарий&nbsp;&mdash; это создание бэкапа базы каждую ночь, создание бэкапа транзакций базы в&nbsp;течение дня, хранение бэкапов базы за&nbsp;последние 7&nbsp;дней, а&nbsp;также хранение бэкапов на&nbsp;1&nbsp;число каждого месяца последние 12&nbsp;месяцев. Также в&nbsp;состав услуги входит регулярная проверка возможности восстановить данные из&nbsp;имеющихся бэкапов.</p>
+
+                    <h3>Общее администрирование пользователей и&nbsp;организация доступа к&nbsp;сервису</h3>
+                    <p>Выполняем базовую поддержку работы пользователей с&nbsp;1С&nbsp;&mdash; контроль зависших сеансов, первичная диагностика проблем в&nbsp;работе базы, анализ возможных причин блокировок и&nbsp;замедления операций, оперативное исправление аварий на&nbsp;уровне операционной системы и&nbsp;службы сервера 1С&nbsp;без модификаций в&nbsp;конфигурации.</p>
+                </div>
+            </section>
+
+            <section class="article__block">
+                <div class="article__block__content">
+                    <h2>Техническая поддержка компьютерной сети, офисной техники и&nbsp;сотрудников</h2>
+                </div>
+
+                <div class="article__sections">
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-1.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Обеспечение компьютерной и&nbsp;оргтехникой, развитие коммуникационных сетей на&nbsp;основании заявок заказчика и&nbsp;согласованных финансовых планов.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-2.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Проведение профилактических работ и&nbsp;текущего ремонта вычислительной и&nbsp;оргтехники, организация сложного ремонта третьими лицами, обеспечение оргтехники расходными материалами.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-3.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Настройка компьютеров Пользователей для работы в&nbsp;компьютерной сети Заказчика и&nbsp;обеспечение доступа Пользователей к&nbsp;сервисам компьютерной сети Заказчика.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-4.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Решение оперативных проблем при работе с&nbsp;обслуживаемыми сервисами компьютерной сети
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-5.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Организация централизованного управления антивирусной защитой серверов и&nbsp;рабочих станций сети.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article__sections__column">
+                        <div class="article__sections__item">
+                            <div class="article__sections__image">
+                                <img class="article__sections__image__img" src="https://kirill-tsurkan.github.io/itsp/en/images/sis-6.jpg" alt="">
+                            </div>
+                            <div class="article__sections__body">
+                                Консультации сотрудников предприятия по&nbsp;вопросам использования программного обеспечения и&nbsp;средств связи.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article__block">
+                <div class="article__block__content">
+                    <h2>Сложные сети</h2>
+                </div>
+
+                <div class="article__list-block">
+                    <img class="article__list-block__bg" src="https://kirill-tsurkan.github.io/itsp/en/images/article-list-bg.svg" alt="">
+
+                    <ul class="article__list-block__list">
+                        <li class="article__list-block__item">Организация сложных распределенных компьютерных сетей на&nbsp;базе технологий Wireless, оптоволокна, кабелей UTP.</li>
+                        <li class="article__list-block__item">Разделение трафика на&nbsp;изолированные потоки в&nbsp;рамках одной общей физической кабельной сети (VLAN).</li>
+                        <li class="article__list-block__item article__list-block__item_br article__list-block__item_bb">Объединение территориально разделенных участков через каналы связи Internet&nbsp;&mdash; с&nbsp;помощью различных типов туннелей VPN.</li>
+                        <li class="article__list-block__item article__list-block__item_bb">Настройка и&nbsp;эксплуатация сетевого оборудования разного класса.</li>
+                        <li class="article__list-block__item article__list-block__item_bb article__list-block__item_br">Подключение нескольких провайдеров интернет, распределение нагрузки и&nbsp;резервирование связи.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </article>
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__copyright">
+                <a class="footer__logo" href="https://kirill-tsurkan.github.io/itsp/en/">
+                    <img class="footer__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
+                </a>
+
+                &copy; 2022, IT Service Pro
+            </div>
+
+            <div class="footer__data">
+                <div class="footer__bank__title">Legal and bank details</div>
+
+                <div class="footer__data__row">
+                    <div class="footer__data__column">
+                        <div class="footer__contact">
+                            <ul class="footer__contact__list">
+                                <li class="footer__contact__item">
+                                    <span class="footer__contact__link">
+                                        <img class="footer__contact__ico" src="/theme/images/map-pin.svg" alt="">
+                                        Chisinau MD-2032, str. Padurii 8A
+                                    </span>
+                                </li>
+                                <li class="footer__contact__item">
+                                    <a class="footer__contact__link" href="mailto:itsp@itsp.md">
+                                        <img class="footer__contact__ico" src="/theme/images/mail.svg" alt="">
+                                        itsp@itsp.md
+                                    </a>
+                                </li>
+                                <li class="footer__contact__item">
+                                    <a class="footer__contact__link" href="tel:+37322859869">
+                                        <img class="footer__contact__ico" src="/theme/images/phone.svg" alt="">
+                                        (+373 22) 859 869
+                                    </a>
+                                </li>
+
+                                <li class="footer__contact__item">
+                                    <span class="footer__contact__link">
+                                        <img class="footer__contact__ico" src="/theme/images/printer.svg" alt="">
+                                        (+373 22) 400 889
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__data__column">
+                        <div class="footer__bank">
+                            <ul class="footer__bank__list">
+                                <li class="footer__bank__item">IDNO 1006600031384</li>
+                                <li class="footer__bank__item">Cod TVA 0305953</li>
+                                <li class="footer__bank__item">IBAN: MD08VI000002224108113MDL in BC Victoriabank fil. №8 Chisinau, VICBMD2X802</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__map" id="map"></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <script src="/theme/js/main.min.js"></script>
+</body>
+
+</html>
