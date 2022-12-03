@@ -27,7 +27,7 @@ var scroll = new SmoothScroll('[data-scroll]', {
 var mymap = L.map('map',{
     dragging: !L.Browser.mobile,
     tap: !L.Browser.mobile
-}).setView([46.980062, 28.889553], 13);
+}).setView([46.982062, 28.884200], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -39,8 +39,19 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 var mapIcon = L.icon({
-    iconUrl: siteurl + '/theme/images/map-marker.svg',
+    //iconUrl: siteurl + '/theme/images/map-marker.svg',
+    iconUrl: '/theme/images/map-marker.svg',
     iconSize: [60, 60]
 });
 
-var marker = L.marker([46.980062, 28.889553], {icon: mapIcon}).addTo(mymap);
+var marker = L.marker([46.982062, 28.884200], {icon: mapIcon}).addTo(mymap);
+
+$(document).on('click', '[data-dropdown_trigger]', function(){
+    $('[data-dropdown_target]').toggleClass('active');
+});
+
+$(document).on('click', function(event){
+    if(!$(event.target).closest('.dropdown').length){
+        $('.dropdown__menu').removeClass('active');
+    }
+});

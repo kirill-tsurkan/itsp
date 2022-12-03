@@ -3,5 +3,9 @@
         "src\\itsp"
     ],
     "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.defaultInterpreterPath": "venv\\Scripts\\python.exe",
+    "python.analysis.extraPaths": [
+        "src\\itsp"
+    ],
 
 }

@@ -9,6 +9,7 @@ Design and development by Kirill Tsurkan
     --white-08: rgba(255,255,255,.8);
     --white-09: rgba(255,255,255,.9);
     --dark: #202020;
+    --dark-02: rgba(32,32,32,.2);
     --dark-06: rgba(32,32,32,.6);
     --dark-08: rgba(32,32,32,.8);
 
@@ -420,7 +421,67 @@ abbr[data-original-title] {
     margin-right: 10px;
 }
 
+.dropdown {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown__menu {
+    display: flex;
+}
+
+.dropdown__btn,
+.dropdown__menu__link {
+    min-height: 40px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: transparent;
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--blue-02);
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown__menu__link:last-child {
+    margin-right: 0;
+}
+
+.dropdown__btn {
+    color: var(--white);
+    background: var(--blue);
+    border: 0;
+}
+
+.dropdown__btn:focus,
+.dropdown__btn:hover {
+    color: var(--white);
+    background: var(--blue);
+    outline: none;
+}
+
+.dropdown__menu__link:focus,
+.dropdown__menu__link:hover {
+    text-decoration: none;
+    color: var(--dark);
+    outline: none;
+}
+
 @media (min-width: 768px) {
+    .header__menu {
+        right: 0;
+        left: auto;
+        width: 50%;
+        box-shadow: 0 0 0 100vw var(--dark-06);
+    }
+
+}
+
+@media (min-width: 992px) {
     .header__btn_show {
         display: none;
     }
@@ -432,6 +493,7 @@ abbr[data-original-title] {
         height: auto;
         padding: 0;
         background: transparent;
+        box-shadow: none;
         display: flex;
         align-items: center;
     }
@@ -458,9 +520,41 @@ abbr[data-original-title] {
         font-size: 14px;
     }
 
-}
+    .dropdown {
+        display: block;
+        position: relative;
+        margin-left: 40px;
+        margin-bottom: 0;
+    }
 
-@media (min-width: 992px) {
+    .dropdown__menu {
+        display: none;
+        flex-direction: column;
+        background: var(--white);
+        padding: 5px 0;
+        border-radius: 8px;
+        box-shadow: 0 8px 48px var(--dark-02);
+        position: absolute;
+        top: 100%;
+        margin-top: 8px;
+        right: 0;
+    }
+
+    .dropdown__menu.active {
+        display: block;
+    }
+
+    .dropdown__btn {
+        margin-right: 0;
+    }
+
+    .dropdown__menu__link {
+        border-radius: 0;
+        border: 0;
+        margin-right: 0;
+        display: flex;
+    }
+
     .header__nav-item {
         margin-left: 40px;
     }
@@ -492,6 +586,17 @@ abbr[data-original-title] {
 
     .btn_header-phone {
         margin: 0 0 0 80px;
+    }
+
+    .dropdown {
+        margin-left: 80px;
+    }
+}
+
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+    .dropdown__menu__link:hover {
+        background: var(--blue-005);
     }
 }
 

@@ -10,24 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{% block description %}{% endblock description %}">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/theme/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/theme/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/theme/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="{{ SITEURL }}/theme/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="{{ SITEURL }}/theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/theme/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/theme/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/theme/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/theme/images/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#202020">
-    <meta name="msapplication-config" content="{{ SITEURL }}/theme/images/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="/theme/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="preconnect" href="https://api.mapbox.com">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="/theme/css/bootstrap-custom.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin=""/>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.min.css">
+    <link rel="stylesheet" href="/theme/css/style.min.css">
 
 
 
@@ -84,7 +84,7 @@
     <header class="header">
         <nav class="header__nav" data-nav>
             <a class="header__logo" href="{{ SITEURL }}/">
-                <img class="header__logo__img" src="{{ SITEURL }}/theme/images/logo.svg" alt="IT Service Pro">
+                <img class="header__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
             </a>
 
             <div class="header__menu" data-mobMenu>
@@ -125,12 +125,28 @@
                     <span class="btn__code">+373 22</span> 859 869
                 </a>
 
-                <button class="header__btn header__btn_hide" type="button" aria-label="Закрыть меню" data-btnMenuHide>
+                <div class="dropdown">
+                    {% set current_lang = [page, article]|select("defined")|get_current_lang %}
+                    <button class="dropdown__btn" type="button" data-dropdown_trigger>{{ current_lang }}</button>
+                    <div class="dropdown__menu" data-dropdown_target>
+                        {% for language_code, locale in LANGUAGES.items() %}
+                            {% if language_code != current_lang %}
+                                {% if language_code != 'ru' %}
+                                    <a class="dropdown__menu__link" href="/{{ language_code }}">{{ language_code }}</a>
+                                {% else %}
+                                    <a class="dropdown__menu__link" href="/">{{ language_code }}</a>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <button class="header__btn header__btn_hide" type="button" aria-label="{% trans %}Закрыть меню{% endtrans %}" data-btnMenuHide>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
             </div>
 
-            <button class="header__btn header__btn_show" type="button" aria-label="Открыть меню" data-btnMenuShow>
+            <button class="header__btn header__btn_show" type="button" aria-label="{% trans %}Открыть меню{% endtrans %}" data-btnMenuShow>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
                     <path d="M12 15L21 15"/><path d="M3 9H21"/>
                 </svg>
@@ -148,14 +164,14 @@
         <div class="footer__inner">
             <div class="footer__copyright">
                 <a class="footer__logo" href="{{ SITEURL }}/">
-                    <img class="footer__logo__img" src="{{ SITEURL }}/theme/images/logo.svg" alt="IT Service Pro">
+                    <img class="footer__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
                 </a>
 
                 &copy; {{ CURRENTYEAR }}, IT Service Pro
             </div>
 
             <div class="footer__data">
-                <div class="footer__bank__title">Юридические и банковские реквизиты</div>
+                <div class="footer__bank__title">{% trans %}Юридические и банковские реквизиты{% endtrans %}</div>
 
                 <div class="footer__data__row">
                     <div class="footer__data__column">
@@ -163,26 +179,26 @@
                             <ul class="footer__contact__list">
                                 <li class="footer__contact__item">
                                     <span class="footer__contact__link">
-                                        <img class="footer__contact__ico" src="{{ SITEURL }}/theme/images/map-pin.svg" alt="">
+                                        <img class="footer__contact__ico" src="/theme/images/map-pin.svg" alt="">
                                         Chisinau MD-2032, str. Padurii 8A
                                     </span>
                                 </li>
                                 <li class="footer__contact__item">
                                     <a class="footer__contact__link" href="mailto:itsp@itsp.md">
-                                        <img class="footer__contact__ico" src="{{ SITEURL }}/theme/images/mail.svg" alt="">
+                                        <img class="footer__contact__ico" src="/theme/images/mail.svg" alt="">
                                         itsp@itsp.md
                                     </a>
                                 </li>
                                 <li class="footer__contact__item">
                                     <a class="footer__contact__link" href="tel:+37322859869">
-                                        <img class="footer__contact__ico" src="{{ SITEURL }}/theme/images/phone.svg" alt="">
+                                        <img class="footer__contact__ico" src="/theme/images/phone.svg" alt="">
                                         (+373 22) 859 869
                                     </a>
                                 </li>
 
                                 <li class="footer__contact__item">
                                     <span class="footer__contact__link">
-                                        <img class="footer__contact__ico" src="{{ SITEURL }}/theme/images/printer.svg" alt="">
+                                        <img class="footer__contact__ico" src="/theme/images/printer.svg" alt="">
                                         (+373 22) 400 889
                                     </span>
                                 </li>
@@ -215,7 +231,7 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
-    <script src="{{ SITEURL }}/theme/js/main.min.js"></script>
+    <script src="/theme/js/main.min.js"></script>
 </body>
 
 </html>

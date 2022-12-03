@@ -4,3 +4,4 @@ dev_conf.py
 env_conf.py
 prod_conf.py
 test_conf.py
+docs/

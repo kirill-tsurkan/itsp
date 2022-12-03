@@ -55,6 +55,38 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 DEFAULT_LANG = 'ru'
 
+LANGUAGES = {
+    'ru': 'Русский',
+    'en': 'English',
+    'ro': 'Română'
+}
+
+PLUGIN_PATHS = ['./pelican-plugins']
+
+PLUGINS = ['i18n_subsites']
+
+I18N_SUBSITES = {
+
+    'en': {
+        'SITENAME': 'itsp',
+    },
+    'ro': {
+        'SITENAME': 'itsp',
+    }
+}
+
+JINJA_ENVIRONMENT = {
+  'extensions': ['jinja2.ext.i18n']
+}
+
+def get_current_lang(gen):
+    seq = list(gen)
+    return DEFAULT_LANG if len(seq) == 0 else seq[0].lang
+
+JINJA_FILTERS = {
+    "get_current_lang": get_current_lang
+}
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

@@ -1,2 +1,3 @@
 pelican[Markdown]
 css-html-js-minify
+Babel
