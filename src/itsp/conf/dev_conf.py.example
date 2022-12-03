@@ -1,4 +1,5 @@
 SITEURL = '' # without trailing slash
+STATICURL = '' # without trailing slash
 OUTPUT_PATH = '../../docs/'
 TIMEZONE = "Europe/Chisinau"
 
