@@ -10,24 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{% block description %}{% endblock description %}">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ STATICURL }}/theme/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ STATICURL }}/theme/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ STATICURL }}/theme/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="{{ STATICURL }}/theme/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="{{ STATICURL }}/theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="{{ STATICURL }}/theme/images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ static }}/theme/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ static }}/theme/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ static }}/theme/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ static }}/theme/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="{{ static }}/theme/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ static }}/theme/images/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#202020">
-    <meta name="msapplication-config" content="{{ STATICURL }}/theme/images/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="{{ static }}/theme/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="preconnect" href="https://api.mapbox.com">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="{{ STATICURL }}/theme/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="{{ static }}/theme/css/bootstrap-custom.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin=""/>
-    <link rel="stylesheet" href="{{ STATICURL }}/theme/css/style.min.css">
+    <link rel="stylesheet" href="{{ static }}/theme/css/style.min.css">
 
 
 
@@ -84,7 +84,7 @@
     <header class="header">
         <nav class="header__nav" data-nav>
             <a class="header__logo" href="{{ SITEURL }}/">
-                <img class="header__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
+                <img class="header__logo__img" src="{{ static }}/theme/images/logo.svg" alt="IT Service Pro">
             </a>
 
             <div class="header__menu" data-mobMenu>
@@ -132,9 +132,9 @@
                         {% for language_code, locale in LANGUAGES.items() %}
                             {% if language_code != current_lang %}
                                 {% if language_code != 'ru' %}
-                                    <a class="dropdown__menu__link" href="/{{ language_code }}">{{ language_code }}</a>
+                                    <a class="dropdown__menu__link" href="{{ ROOTURL }}/{{ language_code }}">{{ language_code }}</a>
                                 {% else %}
-                                    <a class="dropdown__menu__link" href="/">{{ language_code }}</a>
+                                    <a class="dropdown__menu__link" href="{{ ROOTURL }}/">{{ language_code }}</a>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
@@ -164,7 +164,7 @@
         <div class="footer__inner">
             <div class="footer__copyright">
                 <a class="footer__logo" href="{{ SITEURL }}/">
-                    <img class="footer__logo__img" src="/theme/images/logo.svg" alt="IT Service Pro">
+                    <img class="footer__logo__img" src="{{ static }}/theme/images/logo.svg" alt="IT Service Pro">
                 </a>
 
                 &copy; {{ CURRENTYEAR }}, IT Service Pro
@@ -179,26 +179,26 @@
                             <ul class="footer__contact__list">
                                 <li class="footer__contact__item">
                                     <span class="footer__contact__link">
-                                        <img class="footer__contact__ico" src="/theme/images/map-pin.svg" alt="">
+                                        <img class="footer__contact__ico" src="{{ static }}/theme/images/map-pin.svg" alt="">
                                         Chisinau MD-2032, str. Padurii 8A
                                     </span>
                                 </li>
                                 <li class="footer__contact__item">
                                     <a class="footer__contact__link" href="mailto:itsp@itsp.md">
-                                        <img class="footer__contact__ico" src="/theme/images/mail.svg" alt="">
+                                        <img class="footer__contact__ico" src="{{ static }}/theme/images/mail.svg" alt="">
                                         itsp@itsp.md
                                     </a>
                                 </li>
                                 <li class="footer__contact__item">
                                     <a class="footer__contact__link" href="tel:+37322859869">
-                                        <img class="footer__contact__ico" src="/theme/images/phone.svg" alt="">
+                                        <img class="footer__contact__ico" src="{{ static }}/theme/images/phone.svg" alt="">
                                         (+373 22) 859 869
                                     </a>
                                 </li>
 
                                 <li class="footer__contact__item">
                                     <span class="footer__contact__link">
-                                        <img class="footer__contact__ico" src="/theme/images/printer.svg" alt="">
+                                        <img class="footer__contact__ico" src="{{ static }}/theme/images/printer.svg" alt="">
                                         (+373 22) 400 889
                                     </span>
                                 </li>
@@ -231,7 +231,7 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
-    <script src="{{ STATICURL }}/theme/js/main.min.js"></script>
+    <script src="{{ static }}/theme/js/main.min.js"></script>
 </body>
 
 </html>
